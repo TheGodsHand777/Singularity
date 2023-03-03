@@ -12,8 +12,6 @@ public class SingularityItems {
             radioactivity = 100.0f;
             explosiveness = 100.0f;
             charge = 100.0f;
-            cost = 100.0f;
-            hardness = 100;
         }};
     }
 }
