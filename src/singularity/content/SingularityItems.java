@@ -7,7 +7,7 @@ public class Items {
      public static Item omega-singularity;
 
     public static void load(){
-        omega-singularity = new Item("omega-singularity", Color.valueOf("ffffff")){{
+        omega-singularity = new Item("omegaSingularity", Color.valueOf("ffffff")){{
             flammability = 100.0f;
             radioactivity = 100.0f;
             explosiveness = 100.0;
