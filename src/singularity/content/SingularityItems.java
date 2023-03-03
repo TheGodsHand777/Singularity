@@ -4,7 +4,7 @@ import arc.graphics.*;
 import mindustry.type.*;
 
 public class Items {
-     public static Item omega-singularity;
+     public static Item omegaSingularity;
 
     public static void load(){
         omega-singularity = new Item("omegaSingularity", Color.valueOf("ffffff")){{
