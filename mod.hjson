@@ -1,23 +1,23 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Singularity Mod"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "singularity-mod"
 
 #your name
-author: "You"
+author: "Despat"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "singularity.SingularityMod"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "A Mindustry Java mod allowing you to create singularities from various resources. It also adds some turrets, factories, etc. "
 
 #the mod version
-version: 1.0
+version: 1.5
 
 #the minimum game build required to run this mod
-minGameVersion: 140
+minGameVersion: 137
 
 #this is a java mod
 java: true
