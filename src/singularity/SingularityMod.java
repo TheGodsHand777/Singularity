@@ -1,4 +1,4 @@
-package example;
+package singularity;
 
 import arc.*;
 import arc.util.*;
