@@ -1,7 +1,7 @@
 package singularity.content;
 
-import arc.graphics.Color;
-import mindustry.type.Item;
+import arc.graphics.*;
+import mindustry.type.*;
 
 public class SingularityItems {
     public static Item omegaSingularity;
