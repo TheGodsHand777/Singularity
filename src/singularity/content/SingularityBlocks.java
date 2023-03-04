@@ -39,64 +39,79 @@ import static mindustry.type.ItemStack.with;
 
 public class SingularityBlocks {
 
-    public static Block miracle;
+    public static Block miracle, omegaFuser;
     
     public static void load() {
-        miracle = new ItemTurret("miracle") {{
-            requirements(Category.turret, with(Items.copper, 45, Items.lead, 20));
+        miracle = new ItemTurret("miracle"){{
+            requirements(Category.turret, with(Items.copper, 100, Items.graphite, 80, Items.titanium, 50));
             ammo(
-                    Items.scrap, new BasicBulletType(2f, 8) {{
-                        width = 6f;
-                        height = 8f;
-                        lifetime = 60f;
-                        fragBullets = 4;
-                        reloadMultiplier = 0.66f;
-                        fragBullet = new BasicBulletType(1f, 5) {{
-                            splashDamage = 3f;
-                            splashDamageRadius = 40f;
-                            height = 5f;
-                            width = 3f;
-                            lifetime = 20f;
-                        }};
-                    }},
-                    Items.lead, new BasicBulletType(2f, 7) {{
-                        width = 6f;
-                        height = 8f;
-                        lifetime = 60f;
-                        ammoMultiplier = 2;
-                        fragBullets = 3;
-                        fragBullet = new BasicBulletType(1f, 4) {{
-                            splashDamage = 2f;
-                            splashDamageRadius = 40f;
-                            height = 5f;
-                            width = 3f;
-                            lifetime = 20f;
-                        }};
-                    }},
-                    Items.metaglass, new BasicBulletType(3f, 14) {{
-                        width = 6f;
-                        height = 8f;
-                        lifetime = 75f;
-                        ammoMultiplier = 4;
-                        fragBullets = 6;
-                        fragBullet = new BasicBulletType(1f, 7) {{
-                            splashDamage = 6f;
-                            splashDamageRadius = 40f;
-                            height = 5f;
-                            width = 3f;
-                            lifetime = 30f;
-                        }};
-                    }}
+                Items.copper,  new BasicBulletType(2.5f, 11){{
+                    width = 7f;
+                    height = 9f;
+                    lifetime = 60f;
+                    ammoMultiplier = 2;
+                }},
+                Items.graphite, new ArtilleryBulletType(3f, 20){{
+                    knockback = 0.8f;
+                    reloadMultiplier = 0.5f;
+                    lifetime = 80f;
+                    width = height = 11f;
+                    collidesTiles = false;
+                    splashDamageRadius = 25f * 0.75f;
+                    splashDamage = 33f;
+                }},
+                Liquids.water,new LiquidBulletType(Liquids.water){{
+                    knockback = 2f;
+                    reloadMultiplier = 1.5f;
+                    drag = 0.01f;
+                    layer = Layer.bullet - 2f;
+                }},
+                }},
+                Items.blastCompound, new MissileBulletType(3.7f, 10){{
+                    reloadMultiplier = 0.3f;
+                    width = 16f;
+                    height = 16f;
+                    shrinkY = 0f;
+                    splashDamageRadius = 30f;
+                    splashDamage = 30f * 1.5f;
+                    ammoMultiplier = 5f;
+                    hitEffect = Fx.blastExplosion;
+                    despawnEffect = Fx.blastExplosion;
+
+                    status = StatusEffects.blasted;
+                    statusDuration = 60f;
+                }},
+                Items.silicon, new BasicBulletType(3f, 15, "bullet"){{
+                    width = 7f;
+                    height = 9f;
+                    homingPower = 0.1f;
+                    reloadMultiplier = 1.5f;
+                    ammoMultiplier = 5;
+                    lifetime = 60f;
+                }},
+                Items.thorium, new BasicBulletType(4f, 29, "bullet"){{
+                    width = 10f;
+                    height = 13f;
+                    shootEffect = Fx.shootBig;
+                    smokeEffect = Fx.shootBigSmoke;
+                    ammoMultiplier = 4;
+                    lifetime = 60f;
+                }}
             );
 
-            reload = 20f;
-            range = 120;
-            shootCone = 15f;
-            ammoUseEffect = Fx.casing1;
-            health = 320;
-            inaccuracy = 1f;
-            rotateSpeed = 7.2f;
-            coolant = consumeCoolant(0.1f);
+            size = 2;
+            range = 190f;
+            reload = 31f;
+            consumeAmmoOnce = false;
+            ammoEjectBack = 3f;
+            recoil = 3f;
+            shake = 1f;
+            shoot.shots = 4;
+            shoot.shotDelay = 3f;
+
+            ammoUseEffect = Fx.casing2;
+            scaledHealth = 240;
+            shootSound = Sounds.shootBig;
 
             limitRange();
         }};
