@@ -8,10 +8,9 @@ import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
-import singularity.content.SingularityItems; // import the SingularityItems class
+import singularity.content.*; // import the SingularityItems class
 
 public class SingularityMod extends Mod{
-
     public SingularityMod(){
         Log.info("Loaded SingulaityMod constructor.");
     }
