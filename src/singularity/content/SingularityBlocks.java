@@ -1,4 +1,4 @@
-package ExpandedIndustries.content;
+package singularity.content;
 
 import arc.graphics.Color;
 import arc.math.Interp;
