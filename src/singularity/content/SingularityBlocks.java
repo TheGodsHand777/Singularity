@@ -1,40 +1,15 @@
 package singularity.content;
 
-import arc.graphics.Color;
-import arc.math.Interp;
-import arc.struct.EnumSet;
-import arc.struct.Seq;
-import mindustry.content.*;
-import mindustry.entities.bullet.*;
-import mindustry.entities.effect.*;
-import mindustry.entities.pattern.ShootAlternate;
-import mindustry.gen.Sounds;
-import mindustry.graphics.CacheLayer;
-import mindustry.graphics.Layer;
-import mindustry.type.*;
-import mindustry.world.Block;
-import mindustry.world.blocks.campaign.LaunchPad;
-import mindustry.world.blocks.defense.MendProjector;
-import mindustry.world.blocks.defense.OverdriveProjector;
-import mindustry.world.blocks.defense.Wall;
-import mindustry.world.blocks.defense.turrets.*;
-import mindustry.world.blocks.distribution.*;
-import mindustry.world.blocks.environment.*;
-import mindustry.world.blocks.liquid.*;
-import mindustry.world.blocks.logic.LogicBlock;
-import mindustry.world.blocks.power.*;
-import mindustry.world.blocks.production.*;
-import mindustry.world.blocks.storage.*;
-import mindustry.world.blocks.units.*;
-import mindustry.world.consumers.*;
-import mindustry.world.draw.*;
-import mindustry.world.meta.*;
+import  mindustry.world.blocks.defense.turrets.*
+import mindustry.type.*
+import mindustry.content.Items
+import mindustry.entities.bullet.BulletType.*
+import mindustry.content.Liquids
+import mindustry.content.Fx
+import mindustry.graphics.Layer
+import mindustry.content.StatusEffects
 
-import static mindustry.Vars.*;
-import static mindustry.content.Fx.none;
-import static mindustry.type.ItemStack.with;
-
-
+import mindustry.audio.SoundControl.Sounds
 
 
 public class SingularityBlocks {
