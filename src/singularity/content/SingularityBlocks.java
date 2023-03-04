@@ -10,7 +10,7 @@ import mindustry.content.Fx;
 import mindustry.graphics.Layer;
 import mindustry.content.StatusEffects;
 
-import mindustry.audio.SoundControl.Sounds;
+import mindustry.gen.Sounds;
 
 
 public class SingularityBlocks {
