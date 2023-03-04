@@ -1,6 +1,7 @@
 package singularity.content;
 
-import  mindustry.world.blocks.defense.turrets.*;
+import mindustry.world.Block;
+import mindustry.world.blocks.defense.turrets.*;
 import mindustry.type.*;
 import mindustry.content.Items;
 import mindustry.entities.bullet.BulletType.*;
