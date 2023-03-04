@@ -17,7 +17,7 @@ public class SingularityMod extends Mod{
 
     @Override
     public void loadContent(){
-        SingularityItems.load();
+        SingularityBlocks.load();
         Log.info("Loading some example content.");
     }
 }
