@@ -37,7 +37,7 @@ import static mindustry.type.ItemStack.with;
 
 
 
-public class EIBlocks {
+public class ESingularityBlocks {
 
     public static Block miracle;
     
