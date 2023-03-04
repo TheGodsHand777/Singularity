@@ -1,20 +1,20 @@
 package singularity.content;
 
-import  mindustry.world.blocks.defense.turrets.*
-import mindustry.type.*
-import mindustry.content.Items
-import mindustry.entities.bullet.BulletType.*
-import mindustry.content.Liquids
-import mindustry.content.Fx
-import mindustry.graphics.Layer
-import mindustry.content.StatusEffects
+import  mindustry.world.blocks.defense.turrets.*;
+import mindustry.type.*;
+import mindustry.content.Items;
+import mindustry.entities.bullet.BulletType.*;
+import mindustry.content.Liquids;
+import mindustry.content.Fx;
+import mindustry.graphics.Layer;
+import mindustry.content.StatusEffects;
 
-import mindustry.audio.SoundControl.Sounds
+import mindustry.audio.SoundControl.Sounds;
 
 
 public class SingularityBlocks {
 
-    public static Block miracle, omegaFuser;
+    public static Block miracle;
     
     public static void load() {
         miracle = new ItemTurret("miracle"){{
@@ -40,7 +40,6 @@ public class SingularityBlocks {
                     reloadMultiplier = 1.5f;
                     drag = 0.01f;
                     layer = Layer.bullet - 2f;
-                }},
                 }},
                 Items.blastCompound, new MissileBulletType(3.7f, 10){{
                     reloadMultiplier = 0.3f;
